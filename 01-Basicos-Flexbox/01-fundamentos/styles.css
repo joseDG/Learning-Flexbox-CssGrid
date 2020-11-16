@@ -1,0 +1,93 @@
+body {
+    box-sizing: border-box;
+    margin:0;
+    background: #ff9966;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.contenedor {
+    background-color: white;
+    height: calc( 100vh - 20px );
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 30px 0 30px;
+}
+h1, h2 {
+    text-align: center;
+    font-family: 'IBM Plex Serif', serif;
+}
+h2 {
+    color:white;
+}
+
+.contenedor-flex {
+    /*Inicio desde aqui*/
+    /*inline flex solo ocupa el espacio que esta ocupado los elementos
+    display: inline-flex;*/
+    /*Lo mas comun*/
+    display: flex;
+    border: 1px solid black;
+    /*APlicando las direccines*/
+    /*flex-direction: row-reverse;*/
+    flex-direction: row;
+    /*wrap es mas comun utilziarlo en wrap*/
+    flex-wrap: wrap;
+    /*flex flow - column o row y wrap , nowrap o wrap-reverse*/
+    flex-flow: row wrap;
+    /*Alinear Elementos*/
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+
+    /*Alinear lso elementos verticalmente*/
+    height: 400px;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: baseline;
+    align-items: center;
+}
+.elemento-flex{
+    padding: 10px;
+    /*flex-grow= va solo en los hijos | permite ocupar todo espacio*/
+    flex-grow: 1;
+    /*este flex-shirk lo ahce mas pequeño es lo contrario de flex-grow*/
+    flex-shrink: 0;
+    /*trabajar con los 3 */
+    /*flex: toma 3 parametros: 1)flex-grow 2)flex-shrink 3)flex-basic*/
+    flex: 1 0 auto;
+}
+
+.elemento-flex:nth-child(1) {
+    background-color: #E53935;
+    align-self: flex-end;
+}
+
+.elemento-flex:nth-child(2) {
+    /*aplicar el orden con flexblox*/
+    /*order: -1;*/
+    /*flex-grow: 2;*/
+    background-color: #8E24AA;
+    /*flex-basis: 5rem;*/
+}
+
+.elemento-flex:nth-child(3) {
+    background-color: #3F51B5;
+    /*cuado se desea mover un elemento solo*/
+    /*se utiliza todas las propiedades*/
+    align-self: flex-start;
+}
+
+@media screen and (min-width:768px){
+    .elemento-flex:nth-child(3){
+        order: -1;
+        background-color: #3F51B5;
+    }
+
+    .elemento-flex:nth-child(2){
+        order: 3;
+    }
+}

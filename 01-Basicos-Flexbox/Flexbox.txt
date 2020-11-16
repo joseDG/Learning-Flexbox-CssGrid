@@ -1,0 +1,17 @@
+Flex Box 
+- Flexbox es especialmente diseñado para alinear elementos en tus loyouts no añade animaciones.
+- Se piensa en 2 ejes siempre. 
+- Eje principal se lo conoce como el (flex-direcction) 
+    - posee 4 posibles valores: 
+        -row (corre de izquierda a derecha)
+        -row-reserve 
+        -column (corre de arriba a bajo)
+        -column-reverse 
+Eje Cruzado
+- va perpendicular al eje principal 
+- Eje principal se lo conoce como el (flex-direcction) 
+    - posee 4 posibles valores: 
+        -row (corre de arriba hacia abajo)
+        -row-reserve 
+        -column (corre de izquierda a derecha)
+        -column-reverse 
