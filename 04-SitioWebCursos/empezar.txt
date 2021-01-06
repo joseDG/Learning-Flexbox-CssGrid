@@ -1,0 +1,4 @@
+para poder crear el css se pone en la terminal. 
+    - gulp css
+para correr el gulp watch utilizo lo siguiente. 
+    - gulp watch 
